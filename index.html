@@ -12,6 +12,110 @@
 
 <body>
 
+    <div id="inputContainer" class="container">
+
+        <div class='jumbotron text-center'>
+            <h1 id= 'titleJumbo' class='mx-auto'>Shape Up or Shape Out!</h1>
+        </div>
+
+        <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Rectangle</span>
+            </div>
+            <input type="text" aria-label="widthRec" class="form-control" placeholder="width">
+            <input type="text" aria-label="heightRec" class="form-control" placeholder="height">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="btnRectangle">Create Rectangle</button>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Square</span>
+            </div>
+            <input type="text" aria-label="sideLength" class="form-control" placeholder="length">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="btnSquare">Create Square</button>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Circle</span>
+            </div>
+            <input type="text" aria-label="radius" class="form-control" placeholder="radius">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="btnCircle">Create Circle</button>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Triangle</span>
+            </div>
+            <input type="text" aria-label="heightTri" class="form-control" placeholder="height">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="btnTriangle">Create Triangle</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="drawSpaceInfo" class="row mt-5 mx-auto justify-content-center">
+
+        <div id="shapeCanvas" class=""></div>
+
+        <div class="card" style="width: 18rem;">
+
+            <div class="card-body">
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Shape</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="shape" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Width</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="width" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Height</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="height" aria-describedby="basic-addon1">
+                </div>
+                
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Radius</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="radius" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Area</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="area" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Perimeter</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="perimeter" aria-describedby="basic-addon1">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 
 
@@ -27,7 +131,7 @@
 
 
 
-    
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
