@@ -65,54 +65,47 @@
 
         <div id="drawSpaceInfo" class="row mt-5 mx-auto justify-content-between">
 
-            <div id="shapeCanvas" class=""></div>
+            <div id="shapeCanvas" class="card"></div>
 
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 20rem;">
 
                 <div class="card-body">
+                    <!-- Header -->
+                    <div class="shape-information-header card-header">Shape Information</div>
+                    <!-- Unordered List -->
+                    <ul id="shapeInformationList" class="list-group list-group-flush">
+                        <!-- Name -->
+                        <li id="nameListItem" class="list-group-item">
+                            <span id="shapeNameLabel" class="shape-information-label">Name:</span>
+                            <span id="shapeValue" class="shape-information-value ml-1"></span>
+                        </li>
+                        <!-- Height -->
+                        <li id="heightListItem" class="list-group-item">
+                            <span id="heightLabel" class="shape-information-label">Height:</span>
+                            <span id="heightValue" class="shape-information-value ml-1"></span>
+                        </li>
+                        <!-- Width -->
+                        <li id="widthListItem" class="list-group-item">
+                            <span id="widthLabel" class="shape-information-label">Width:</span>
+                            <span id="widthValue" class="shape-information-value ml-1"></span>
+                        </li>
+                        <!-- Area -->
+                        <li id="areaListItem" class="list-group-item">
+                            <span id="areaLabel" class="shape-information-label">Area:</span>
+                            <span id="areaValue" class="shape-information-value ml-1"></span>
+                        </li>
+                        <!-- Perimeter -->
+                        <li id="perimeterListItem" class="list-group-item">
+                            <span id="perimeterLabel" class="shape-information-label">Perimeter:</span>
+                            <span id="perimeterValue" class="shape-information-value ml-1"></span>
+                        </li>
 
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">Shape</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="shape" aria-describedby="basic-addon1">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">Width</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="width" aria-describedby="basic-addon1">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">Height</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="height" aria-describedby="basic-addon1">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">Radius</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="radius" aria-describedby="basic-addon1">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">Area</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="area" aria-describedby="basic-addon1">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">Perimeter</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="perimeter" aria-describedby="basic-addon1">
-                    </div>
-
+                        <li id="radiusListItem" class="list-group-item">
+                            <span id="radiusLabel" class="shape-information-label">Radius:</span>
+                            <span id="radiusValue" class="shape-information-value ml-1"></span>
+                        </li>
+                    </ul>
+                    
                 </div>
 
             </div>

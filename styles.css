@@ -5,3 +5,14 @@
     width: 600px;
     background-color: rgb(233,236,239);
 }
+
+
+.rectangle, 
+.square {
+    border: black solid 1px;
+}
+
+.circle {
+    border: black solid 1px;
+    border-radius: 1000px;
+}
