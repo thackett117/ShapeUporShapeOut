@@ -68,7 +68,7 @@ class Shape {
         heightLabel.innerHTML = "Height: ";
         perimeterLabel.innerHTML = "Perimeter: ";
     }
-    
+
     randomAxis() {
         this.yAxis = randomVal(0, maxPixel);
         this.xAxis = randomVal(0, maxPixel);

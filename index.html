@@ -12,14 +12,18 @@
 
 <body>
 
+    <!-- container for the whole page -->
     <div class="container">
 
+        <!-- title jumbo -->
         <div class='jumbotron text-center'>
             <h1 id='titleJumbo' class='mx-auto'>Shape Up or Shape Out!</h1>
         </div>
 
-        <div id="inputContainer">
+        <!-- container for the inputs -->
+        <div id="inputContainer" class="container">
 
+            <!-- input group for rectangle -->
             <div class="input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text">Rectangle</span>
@@ -27,95 +31,114 @@
                 <input id="widthRec" type="text" aria-label="widthRec" class="form-control" placeholder="width">
                 <input id="heightRec" type="text" aria-label="heightRec" class="form-control" placeholder="height">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary inputBtn" type="button" id="btnRectangle">Create Rectangle</button>
+                    <button class="btn btn-outline-secondary inputBtn" type="button" id="btnRectangle">Create
+                        Rectangle</button>
                 </div>
             </div>
 
+            <!-- input group for square -->
             <div class="input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text">Square</span>
                 </div>
                 <input id="lengthSq" type="text" aria-label="sideLength" class="form-control" placeholder="length">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary inputBtn" type="button" id="btnSquare">Create Square</button>
+                    <button class="btn btn-outline-secondary inputBtn" type="button" id="btnSquare">Create
+                        Square</button>
                 </div>
             </div>
 
+            <!-- input group for circle  -->
             <div class="input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text">Circle</span>
                 </div>
                 <input id="radiusCir" type="text" aria-label="radius" class="form-control" placeholder="radius">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary inputBtn" type="button" id="btnCircle">Create Circle</button>
+                    <button class="btn btn-outline-secondary inputBtn" type="button" id="btnCircle">Create
+                        Circle</button>
                 </div>
             </div>
 
+            <!-- input group for triangle  -->
             <div class="input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text">Triangle</span>
                 </div>
                 <input id="heightTri" type="text" aria-label="heightTri" class="form-control" placeholder="height">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary inputBtn" type="button" id="btnTriangle">Create Triangle</button>
+                    <button class="btn btn-outline-secondary inputBtn" type="button" id="btnTriangle">Create
+                        Triangle</button>
                 </div>
             </div>
 
         </div>
 
+        <!-- container for the canvas space and the info card  -->
         <div id="drawSpaceInfo" class="row mt-5 mx-auto justify-content-between">
 
+            <!-- div for the canvas  -->
             <div id="shapeCanvas" class="card"></div>
 
+            <!-- card to hold the values of shapes when clicked -->
             <div class="card" style="width: 20rem;">
 
                 <div class="card-body">
-                    <!-- Header -->
+                    <!-- card header -->
                     <div class="shape-information-header card-header">Shape Information</div>
-                    <!-- Unordered List -->
+
+                    <!-- unordered list with separate spans to hold the label and the values -->
                     <ul id="shapeInformationList" class="list-group list-group-flush">
-                        <!-- Name -->
+
+                        <!-- name of shape -->
                         <li id="nameListItem" class="list-group-item">
                             <span id="shapeNameLabel" class="shape-information-label">Name:</span>
                             <span id="shapeValue" class="shape-information-value ml-1"></span>
                         </li>
-                        <!-- Height -->
+
+                        <!-- height of shape -->
                         <li id="heightListItem" class="list-group-item">
                             <span id="heightLabel" class="shape-information-label">Height:</span>
                             <span id="heightValue" class="shape-information-value ml-1"></span>
                         </li>
-                        <!-- Width -->
+
+                        <!-- width of shape -->
                         <li id="widthListItem" class="list-group-item">
                             <span id="widthLabel" class="shape-information-label">Width:</span>
                             <span id="widthValue" class="shape-information-value ml-1"></span>
                         </li>
-                        <!-- Area -->
+
+                        <!-- area of shape -->
                         <li id="areaListItem" class="list-group-item">
                             <span id="areaLabel" class="shape-information-label">Area:</span>
                             <span id="areaValue" class="shape-information-value ml-1"></span>
                         </li>
-                        <!-- Perimeter -->
+
+                        <!-- perimeter of shape -->
                         <li id="perimeterListItem" class="list-group-item">
                             <span id="perimeterLabel" class="shape-information-label">Perimeter:</span>
                             <span id="perimeterValue" class="shape-information-value ml-1"></span>
                         </li>
 
+                        <!-- radius of shape -->
                         <li id="radiusListItem" class="list-group-item">
                             <span id="radiusLabel" class="shape-information-label">Radius:</span>
                             <span id="radiusValue" class="shape-information-value ml-1"></span>
                         </li>
                     </ul>
 
+                    <!-- reset button  -->
                     <div class="input ml-3 mt-5">
                         <button class="btn btn-outline-secondary" type="button" id="resetBtn">Reset</button>
                     </div>
-                    
+
                 </div>
 
             </div>
 
         </div>
 
+        <!-- footer jumbo -->
         <div class='jumbotron text-center mt-5'>
             <h1 id='titleJumbo' class='mx-auto'>Shape Up or Shape Out!</h1>
         </div>
