@@ -153,8 +153,36 @@ class Circle extends Shape {
 
 
 class Triangle extends Shape {
-    constructor() {
-           
+    constructor(height) {
+        super(height);
+        this.height = height;
+        this.width = height;
+        this.triDiv = document.createElement('div');
+        this.triDiv.className = 'triangle';
+        this.triDiv.style.borderBottomWidth = `${this.height}px`;
+        this.triDiv.style.borderRightWidth = `${this.height}px`
+        this.yAxis = Math.floor(Math.random() * 500);
+        this.xAxis = Math.floor(Math.random() * 500);
+        this.triDiv.style.top = `${this.yAxis}px`;
+        this.triDiv.style.left = `${this.xAxis}px`;
+        this.triDiv.style.position = 'absolute';
+        canvas.appendChild(this.triDiv);
+        this.triDiv.addEventListener("click", () => this.describe());
+        this.triDiv.addEventListener("dblclick", () => {
+            this.triDiv.remove();
+            this.clearInfo();
+        })
+    }
+
+    describe() {
+        nameOfShape.innerHTML = "Triangle";
+        heightOfShape.innerHTML = `${this.height} Pixels`;
+        widthOfShape.innerHTML = `${this.width} Pixels`;
+        areaOfShape.innerHTML = `${(this.height ** 2) / 2} Pixels`;
+        perimeterOfShape.innerHTML = `${Math.floor(Math.sqrt((this.height ** 2) + (this.height ** 2)) + (this.height * 2))}`;
+        radiusOfShape.innerHTML = `Radii are for Circles`;
+        heightLabel.innerHTML = `Height: `;
+        perimeterLabel.innerHTML = `Perimeter: `;
     }
 }
 
@@ -169,12 +197,17 @@ btnRec.addEventListener("click", () => {
 btnSqu.addEventListener("click", () => {
     new Square(lengthSq.value);
     lengthSq.value = "";
-})
+});
 
 btnCir.addEventListener("click", () => {
     new Circle(radiusCir.value);
     radiusCir.value = "";
-})
+});
+
+btnTri.addEventListener("click", () => {
+    new Triangle(heightTri.value)
+    heightTri.value = "";
+});
 
 
 
