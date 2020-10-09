@@ -3,6 +3,7 @@ const btnRec = document.getElementById('btnRectangle'),
     btnSqu = document.getElementById('btnSquare'),
     btnCir = document.getElementById('btnCircle'),
     btnTri = document.getElementById('btnTriangle'),
+    btnReset = document.getElementById('resetBtn'),
     canvas = document.getElementById('shapeCanvas'),
     widthRec = document.getElementById('widthRec'),
     heightRec = document.getElementById('heightRec'),
@@ -21,8 +22,7 @@ const btnRec = document.getElementById('btnRectangle'),
     widthLabel = document.getElementById('widthLabel'),
     maxPixel = 500;
 
-//array to put shape objects in when created
-let shapes = [];
+
 
 
 //classes of shapes
@@ -207,8 +207,10 @@ btnCir.addEventListener("click", () => {
 
 btnTri.addEventListener("click", () => {
     new Triangle(heightTri.value)
-    heightTri.value = "";
+    // heightTri.value = "";
 });
+
+btnReset.addEventListener("click", () => location.reload());
 
 
 
