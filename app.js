@@ -32,7 +32,32 @@ class Shape {
         this.width = width;
         this.radius = radius;
         this.sideLength = sideLength;
+        this.div = document.createElement('div');
+        this.div.style.height = `${this.height}px`;
+        this.div.style.width = `${this.width}px`;
+        this.randomAxis();
+        this.div.style.top = `${this.yAxis}px`;
+        this.div.style.left = `${this.xAxis}px`;
+        this.div.style.position = 'absolute';
+        canvas.appendChild(this.div);
+        this.div.addEventListener("click", () => this.describe());
+        this.div.addEventListener("dblclick", () => {
+            this.div.remove();
+            this.clearInfo();
+        })
     }
+
+    describe() {
+        nameOfShape.innerHTML = `Shape`;
+        heightOfShape.innerHTML = `${this.height} Pixels`;
+        widthOfShape.innerHTML = `${this.width} Pixels`;
+        areaOfShape.innerHTML = `${this.height * this.width} Pixels`;
+        perimeterOfShape.innerHTML = `${(parseInt(this.height) + parseInt(this.width)) * 2} Pixels`;
+        radiusOfShape.innerHTML = `Radii are for Circles`;
+        heightLabel.innerHTML = `Height: `;
+        perimeterLabel.innerHTML = `Perimeter: `;
+    }
+
     clearInfo() {
         nameOfShape.innerHTML = "";
         heightOfShape.innerHTML = "";
@@ -54,23 +79,7 @@ class Shape {
 class Rectangle extends Shape {
     constructor(height, width) {
         super(height, width);
-        this.height = height;
-        this.width = width;
-        this.recDiv = document.createElement('div');
-        this.recDiv.className = 'rectangle';
-        this.recDiv.style.height = `${this.height}px`;
-        this.recDiv.style.width = `${this.width}px`;
-        this.randomAxis();
-        this.recDiv.style.top = `${this.yAxis}px`;
-        this.recDiv.style.left = `${this.xAxis}px`;
-        this.recDiv.style.position = 'absolute';
-        canvas.appendChild(this.recDiv);
-        this.recDiv.addEventListener("click", () => this.describe());
-        this.recDiv.addEventListener("dblclick", () => {
-            this.recDiv.remove();
-            this.clearInfo();
-        })
-
+        this.div.className = 'rectangle';
     }
 
     describe() {
@@ -90,20 +99,9 @@ class Square extends Shape {
     constructor(sideLength) {
         super(sideLength)
         this.sideLength = sideLength;
-        this.squDiv = document.createElement('div');
-        this.squDiv.className = 'square';
-        this.squDiv.style.height = `${this.sideLength}px`;
-        this.squDiv.style.width = `${this.sideLength}px`;
-        this.randomAxis();
-        this.squDiv.style.top = `${this.yAxis}px`;
-        this.squDiv.style.left = `${this.xAxis}px`;
-        this.squDiv.style.position = 'absolute';
-        canvas.appendChild(this.squDiv);
-        this.squDiv.addEventListener("click", () => this.describe());
-        this.squDiv.addEventListener("dblclick", () => {
-            this.squDiv.remove();
-            this.clearInfo();
-        })
+        this.div.className = 'square';
+        this.div.style.height = `${this.sideLength}px`;
+        this.div.style.width = `${this.sideLength}px`;
     }
 
     describe() {
@@ -124,21 +122,9 @@ class Circle extends Shape {
         super(radius);
         this.radius = radius;
         this.diameter = this.radius * 2;
-        this.cirDiv = document.createElement('div');
-        this.cirDiv.className = 'circle';
-        this.cirDiv.style.height = `${this.diameter}px`;
-        this.cirDiv.style.width = `${this.diameter}px`;
-        this.randomAxis();
-        this.cirDiv.style.top = `${this.yAxis}px`;
-        this.cirDiv.style.left = `${this.xAxis}px`;
-        this.cirDiv.style.position = 'absolute';
-        canvas.appendChild(this.cirDiv);
-        this.cirDiv.addEventListener("click", () => this.describe());
-        this.cirDiv.addEventListener("dblclick", () => {
-            this.cirDiv.remove();
-            this.clearInfo();
-        })
-
+        this.div.className = 'circle';
+        this.div.style.height = `${this.diameter}px`;
+        this.div.style.width = `${this.diameter}px`;
     }
 
     describe() {
@@ -157,22 +143,10 @@ class Circle extends Shape {
 class Triangle extends Shape {
     constructor(height) {
         super(height);
-        this.height = height;
         this.width = height;
-        this.triDiv = document.createElement('div');
-        this.triDiv.className = 'triangle';
-        this.triDiv.style.borderBottomWidth = `${this.height}px`;
-        this.triDiv.style.borderRightWidth = `${this.height}px`
-        this.randomAxis();
-        this.triDiv.style.top = `${this.yAxis}px`;
-        this.triDiv.style.left = `${this.xAxis}px`;
-        this.triDiv.style.position = 'absolute';
-        canvas.appendChild(this.triDiv);
-        this.triDiv.addEventListener("click", () => this.describe());
-        this.triDiv.addEventListener("dblclick", () => {
-            this.triDiv.remove();
-            this.clearInfo();
-        })
+        this.div.className = 'triangle';
+        this.div.style.borderBottomWidth = `${this.height}px`;
+        this.div.style.borderRightWidth = `${this.height}px`
     }
 
     describe() {
@@ -188,7 +162,7 @@ class Triangle extends Shape {
 }
 
 
-
+//buttons creating the objects and clearing the input fields
 btnRec.addEventListener("click", () => {
     new Rectangle(heightRec.value, widthRec.value);
     heightRec.value = "";
@@ -210,8 +184,8 @@ btnTri.addEventListener("click", () => {
     heightTri.value = "";
 });
 
+//reset button
 btnReset.addEventListener("click", () => location.reload());
 
-
-
+//function for a random value between a min and max
 randomVal = (min, max) => Math.floor(Math.random() * (max - min)) + min;
