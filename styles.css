@@ -9,17 +9,23 @@
 .rectangle {
     border: black solid 1px;
     background-color: green;
+    cursor: pointer;
+    opacity: .5;
 }
 
 .square {
     border: black solid 1px;
     background-color: red;
+    cursor: pointer;
+    opacity: .5;
 }
 
 .circle {
     border: black solid 1px;
     border-radius: 1000px;
     background-color: purple;
+    cursor: pointer;
+    opacity: .5;
 }
 
 .triangle {
@@ -29,4 +35,13 @@
     border-right-style: solid;
     border-right-color: transparent;
     border-bottom-color: yellow;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.rectangle:hover,
+.square:hover,
+.circle:hover,
+.triangle:hover {
+    opacity: 1;
 }

@@ -19,7 +19,7 @@ const btnRec = document.getElementById('btnRectangle'),
     perimeterLabel = document.getElementById('perimeterLabel'),
     heightLabel = document.getElementById('heightLabel'),
     widthLabel = document.getElementById('widthLabel'),
-    maxPixel = 600;
+    maxPixel = 500;
 
 //array to put shape objects in when created
 let shapes = [];
@@ -43,6 +43,11 @@ class Shape {
         heightLabel.innerHTML = "Height: ";
         perimeterLabel.innerHTML = "Perimeter: ";
     }
+    
+    randomAxis() {
+        this.yAxis = randomVal(0, maxPixel);
+        this.xAxis = randomVal(0, maxPixel);
+    }
 }
 
 
@@ -55,8 +60,7 @@ class Rectangle extends Shape {
         this.recDiv.className = 'rectangle';
         this.recDiv.style.height = `${this.height}px`;
         this.recDiv.style.width = `${this.width}px`;
-        this.yAxis = Math.floor(Math.random() * 500);
-        this.xAxis = Math.floor(Math.random() * 500);
+        this.randomAxis();
         this.recDiv.style.top = `${this.yAxis}px`;
         this.recDiv.style.left = `${this.xAxis}px`;
         this.recDiv.style.position = 'absolute';
@@ -90,8 +94,7 @@ class Square extends Shape {
         this.squDiv.className = 'square';
         this.squDiv.style.height = `${this.sideLength}px`;
         this.squDiv.style.width = `${this.sideLength}px`;
-        this.yAxis = Math.floor(Math.random() * 500);
-        this.xAxis = Math.floor(Math.random() * 500);
+        this.randomAxis();
         this.squDiv.style.top = `${this.yAxis}px`;
         this.squDiv.style.left = `${this.xAxis}px`;
         this.squDiv.style.position = 'absolute';
@@ -125,8 +128,7 @@ class Circle extends Shape {
         this.cirDiv.className = 'circle';
         this.cirDiv.style.height = `${this.diameter}px`;
         this.cirDiv.style.width = `${this.diameter}px`;
-        this.yAxis = Math.floor(Math.random() * 500);
-        this.xAxis = Math.floor(Math.random() * 500);
+        this.randomAxis();
         this.cirDiv.style.top = `${this.yAxis}px`;
         this.cirDiv.style.left = `${this.xAxis}px`;
         this.cirDiv.style.position = 'absolute';
@@ -161,8 +163,7 @@ class Triangle extends Shape {
         this.triDiv.className = 'triangle';
         this.triDiv.style.borderBottomWidth = `${this.height}px`;
         this.triDiv.style.borderRightWidth = `${this.height}px`
-        this.yAxis = Math.floor(Math.random() * 500);
-        this.xAxis = Math.floor(Math.random() * 500);
+        this.randomAxis();
         this.triDiv.style.top = `${this.yAxis}px`;
         this.triDiv.style.left = `${this.xAxis}px`;
         this.triDiv.style.position = 'absolute';
