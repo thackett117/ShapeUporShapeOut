@@ -27,11 +27,9 @@ const btnRec = document.getElementById('btnRectangle'),
 
 //classes of shapes
 class Shape {
-    constructor(height, width, radius, sideLength) {
+    constructor(height, width) {
         this.height = height;
         this.width = width;
-        this.radius = radius;
-        this.sideLength = sideLength;
         this.div = document.createElement('div');
         this.div.style.height = `${this.height}px`;
         this.div.style.width = `${this.width}px`;
@@ -97,7 +95,7 @@ class Rectangle extends Shape {
 
 class Square extends Shape {
     constructor(sideLength) {
-        super(sideLength)
+        super()
         this.sideLength = sideLength;
         this.div.className = 'square';
         this.div.style.height = `${this.sideLength}px`;
@@ -119,7 +117,7 @@ class Square extends Shape {
 
 class Circle extends Shape {
     constructor(radius) {
-        super(radius);
+        super();
         this.radius = radius;
         this.diameter = this.radius * 2;
         this.div.className = 'circle';
@@ -143,7 +141,6 @@ class Circle extends Shape {
 class Triangle extends Shape {
     constructor(height) {
         super(height);
-        this.width = height;
         this.div.className = 'triangle';
         this.div.style.borderBottomWidth = `${this.height}px`;
         this.div.style.borderRightWidth = `${this.height}px`
@@ -152,7 +149,7 @@ class Triangle extends Shape {
     describe() {
         nameOfShape.innerHTML = "Triangle";
         heightOfShape.innerHTML = `${this.height} Pixels`;
-        widthOfShape.innerHTML = `${this.width} Pixels`;
+        widthOfShape.innerHTML = `${this.height} Pixels`;
         areaOfShape.innerHTML = `${(this.height ** 2) / 2} Pixels`;
         perimeterOfShape.innerHTML = `${Math.floor(Math.sqrt((this.height ** 2) + (this.height ** 2)) + (this.height * 2))}`;
         radiusOfShape.innerHTML = `Radii are for Circles`;
