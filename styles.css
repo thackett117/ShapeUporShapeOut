@@ -26,9 +26,7 @@
     width: 0;
     height: 0;
     border-bottom-style: solid;
-    border-bottom-right-radius: 0.125rem;
     border-right-style: solid;
     border-right-color: transparent;
-    border-top-left-radius: 0.125rem;
     border-bottom-color: yellow;
 }

@@ -1,25 +1,25 @@
 //buttons
 const btnRec = document.getElementById('btnRectangle'),
- btnSqu = document.getElementById('btnSquare'),
- btnCir = document.getElementById('btnCircle'),
- btnTri = document.getElementById('btnTriangle'),
- canvas = document.getElementById('shapeCanvas'),
- widthRec = document.getElementById('widthRec'),
- heightRec = document.getElementById('heightRec'),
- lengthSq = document.getElementById('lengthSq'),
- radiusCir = document.getElementById('radiusCir'),
- heightTri = document.getElementById('heightTri'),
- nameOfShape = document.getElementById('shapeValue'),
- heightOfShape = document.getElementById('heightValue'),
- widthOfShape = document.getElementById('widthValue'),
- areaOfShape = document.getElementById('areaValue'),
- perimeterOfShape = document.getElementById('perimeterValue'),
- radiusOfShape = document.getElementById('radiusValue'),
- radiusLabel = document.getElementById('radiusLabel'),
- perimeterLabel = document.getElementById('perimeterLabel'),
- heightLabel = document.getElementById('heightLabel'),
- widthLabel = document.getElementById('widthLabel'),
- maxPixel = 600;
+    btnSqu = document.getElementById('btnSquare'),
+    btnCir = document.getElementById('btnCircle'),
+    btnTri = document.getElementById('btnTriangle'),
+    canvas = document.getElementById('shapeCanvas'),
+    widthRec = document.getElementById('widthRec'),
+    heightRec = document.getElementById('heightRec'),
+    lengthSq = document.getElementById('lengthSq'),
+    radiusCir = document.getElementById('radiusCir'),
+    heightTri = document.getElementById('heightTri'),
+    nameOfShape = document.getElementById('shapeValue'),
+    heightOfShape = document.getElementById('heightValue'),
+    widthOfShape = document.getElementById('widthValue'),
+    areaOfShape = document.getElementById('areaValue'),
+    perimeterOfShape = document.getElementById('perimeterValue'),
+    radiusOfShape = document.getElementById('radiusValue'),
+    radiusLabel = document.getElementById('radiusLabel'),
+    perimeterLabel = document.getElementById('perimeterLabel'),
+    heightLabel = document.getElementById('heightLabel'),
+    widthLabel = document.getElementById('widthLabel'),
+    maxPixel = 600;
 
 //array to put shape objects in when created
 let shapes = [];
@@ -69,7 +69,7 @@ class Rectangle extends Shape {
 
     }
 
-    describe () {
+    describe() {
         nameOfShape.innerHTML = `Rectangle`;
         heightOfShape.innerHTML = `${this.height} Pixels`;
         widthOfShape.innerHTML = `${this.width} Pixels`;
@@ -211,4 +211,4 @@ btnTri.addEventListener("click", () => {
 
 
 
-randomVal = (min, max) => Math.floor(Math.random() * (max-min)) + min;
+randomVal = (min, max) => Math.floor(Math.random() * (max - min)) + min;
