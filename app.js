@@ -207,7 +207,7 @@ btnCir.addEventListener("click", () => {
 
 btnTri.addEventListener("click", () => {
     new Triangle(heightTri.value)
-    // heightTri.value = "";
+    heightTri.value = "";
 });
 
 btnReset.addEventListener("click", () => location.reload());
