@@ -6,15 +6,20 @@
     background-color: rgb(233,236,239);
 }
 
+.rectangle {
+    border: black solid 1px;
+    background-color: green;
+}
 
-.rectangle, 
 .square {
     border: black solid 1px;
+    background-color: red;
 }
 
 .circle {
     border: black solid 1px;
     border-radius: 1000px;
+    background-color: purple;
 }
 
 .triangle {
@@ -25,4 +30,5 @@
     border-right-style: solid;
     border-right-color: transparent;
     border-top-left-radius: 0.125rem;
+    border-bottom-color: yellow;
 }
