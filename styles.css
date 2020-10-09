@@ -4,6 +4,7 @@
     height: 600px;
     width: 600px;
     background-color: rgb(233,236,239);
+    overflow: auto;
 }
 
 .rectangle {
@@ -41,4 +42,12 @@
 .triangle:hover {
     opacity: 1;
     cursor: pointer;
+}
+
+.input-group-text {
+    width: 100px;
+}
+
+.inputBtn {
+    width: 150px;
 }
